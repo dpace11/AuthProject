@@ -1,0 +1,29 @@
+﻿@model AuthProject.Models.LoginModel;
+
+@{
+    Layout = null;
+}
+<div>
+    <form asp-controller="Access" asp-action="Login" method="post">
+        <h1>Login</h1>
+        <div class="form-group row">
+            <input type="text" asp-for="Email" />
+        </div>
+        <div class="form-group row">
+            <input type="password" asp-for="Password" />
+        </div>
+        <div class="form-group row">
+            <input type="checkbox" asp-for="KeepLoggedIn" />
+        </div>
+        <div class="form-group row">
+            <button type="submit">login</button>
+        </div>
+
+        @if (ViewData["validationMessage"] != null)
+        {
+        
+            <br />
+            <label>@ViewData["validationMessage"]</label>
+        }
+    </form>
+</div>
