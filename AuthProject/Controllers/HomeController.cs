@@ -10,7 +10,6 @@ using Microsoft.EntityFrameworkCore;
 namespace AuthProject.Controllers
 {
     [Authorize]
-    [authorizeatt]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
